@@ -22,15 +22,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PhotoSearchViewController: UIViewController {
   
   @IBOutlet weak var searchTextField: UITextField!
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet weak var resultsTable: UITableView!
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
   }
 
 }
-
