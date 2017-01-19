@@ -38,9 +38,6 @@
 		3CFCDDEA1C1971B600B061E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CFCDDEC1C1971B600B061E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CFCDDF51C1981C100B061E0 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		45B77C571E2BFA25000E7047 /* ManuallyWireUpUIExample.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ManuallyWireUpUIExample.playground; sourceTree = "<group>"; };
-		45DFBCBE1E2BFCFE009F5104 /* ManuallyWireUpWithDataModel.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ManuallyWireUpWithDataModel.playground; sourceTree = "<group>"; };
-		45F8471F1E2C1557004CBA6F /* WiringUpWithBond.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = WiringUpWithBond.playground; sourceTree = "<group>"; };
 		9512AE2444B3334C5A8608C0 /* Pods-BindingWithBond.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BindingWithBond.release.xcconfig"; path = "Pods/Target Support Files/Pods-BindingWithBond/Pods-BindingWithBond.release.xcconfig"; sourceTree = "<group>"; };
 		C6BB269468E922CE4B7EA08F /* Pods_BindingWithBond.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BindingWithBond.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE07C5623C6C7639BEAB62EE /* Pods-BindingWithBond.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BindingWithBond.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BindingWithBond/Pods-BindingWithBond.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,9 +86,6 @@
 		3CFCDDD41C1971B500B061E0 = {
 			isa = PBXGroup;
 			children = (
-				45F8471F1E2C1557004CBA6F /* WiringUpWithBond.playground */,
-				45DFBCBE1E2BFCFE009F5104 /* ManuallyWireUpWithDataModel.playground */,
-				45B77C571E2BFA25000E7047 /* ManuallyWireUpUIExample.playground */,
 				3CFCDDDF1C1971B600B061E0 /* BindingWithBond */,
 				3CFCDDDE1C1971B600B061E0 /* Products */,
 				768A3D98D6A72503C4EDCE3A /* Frameworks */,
