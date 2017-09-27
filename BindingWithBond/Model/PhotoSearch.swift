@@ -72,7 +72,7 @@ class PhotoSearch {
       DispatchQueue.main.async {
         do {
           // parse the results, then filter based on date
-          let result = try self.parseSearchResults(data!)
+            let result = try self.parseSearchResults(data ?? Data())
             .filter {
               photo in
               if query.dateFilter {

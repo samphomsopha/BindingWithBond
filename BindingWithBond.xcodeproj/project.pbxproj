@@ -20,6 +20,7 @@
 		3CFCDDEB1C1971B600B061E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFCDDE91C1971B600B061E0 /* LaunchScreen.storyboard */; };
 		3CFCDDF61C1981C100B061E0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFCDDF51C1981C100B061E0 /* SettingsViewController.swift */; };
 		8D11113BF04AE15938F7A226 /* Pods_BindingWithBond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6BB269468E922CE4B7EA08F /* Pods_BindingWithBond.framework */; };
+		A91F0F2F1F7B7C7C00F664E5 /* PhotoSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91F0F2E1F7B7C7C00F664E5 /* PhotoSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		3CFCDDEC1C1971B600B061E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CFCDDF51C1981C100B061E0 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9512AE2444B3334C5A8608C0 /* Pods-BindingWithBond.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BindingWithBond.release.xcconfig"; path = "Pods/Target Support Files/Pods-BindingWithBond/Pods-BindingWithBond.release.xcconfig"; sourceTree = "<group>"; };
+		A91F0F2E1F7B7C7C00F664E5 /* PhotoSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoSearchViewModel.swift; path = "../../../../Library/Autosave Information/PhotoSearchViewModel.swift"; sourceTree = "<group>"; };
 		C6BB269468E922CE4B7EA08F /* Pods_BindingWithBond.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BindingWithBond.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE07C5623C6C7639BEAB62EE /* Pods-BindingWithBond.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BindingWithBond.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BindingWithBond/Pods-BindingWithBond.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,13 +78,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		3C8285671C19DCDC00ECF06C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		3CFCDDD41C1971B500B061E0 = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +99,7 @@
 		3CFCDDDF1C1971B600B061E0 /* BindingWithBond */ = {
 			isa = PBXGroup;
 			children = (
-				3C8285671C19DCDC00ECF06C /* ViewModel */,
+				A91F0F2D1F7B7C6100F664E5 /* ViewModel */,
 				3C82855C1C19D8BB00ECF06C /* Model */,
 				3C82856D1C1A1E2900ECF06C /* PhotoTableViewCell.swift */,
 				3CFCDDE01C1971B600B061E0 /* AppDelegate.swift */,
@@ -125,6 +120,14 @@
 				C6BB269468E922CE4B7EA08F /* Pods_BindingWithBond.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A91F0F2D1F7B7C6100F664E5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A91F0F2E1F7B7C7C00F664E5 /* PhotoSearchViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,9 +207,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BindingWithBond/Pods-BindingWithBond-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
+				"${BUILT_PRODUCTS_DIR}/DatePickerCell/DatePickerCell.framework",
+				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bond.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DatePickerCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -219,13 +231,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BindingWithBond-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D7F54501A4778A6B50941BD4 /* [CP] Copy Pods Resources */ = {
@@ -259,6 +274,7 @@
 				3C8285641C19D8BB00ECF06C /* PhotoSearch.swift in Sources */,
 				3CFCDDF61C1981C100B061E0 /* SettingsViewController.swift in Sources */,
 				3C8285621C19D8BB00ECF06C /* Photo.swift in Sources */,
+				A91F0F2F1F7B7C7C00F664E5 /* PhotoSearchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
